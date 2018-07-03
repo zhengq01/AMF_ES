@@ -1,0 +1,17 @@
+#COMPONENT_PROPERTIES  ;n
+ $NAME
+  n
+ $MOBILE
+  0; MOBIL-Flag: 0=immobile, 1=mobile/transported
+ $DIFFUSION
+  1  0      ; diffusion model type, diffusion constant
+
+#COMPONENT_PROPERTIES  ;Ki
+ $NAME
+  Ki
+ $MOBILE
+  0; MOBIL-Flag: 0=immobile, 1=mobile/transported
+ $DIFFUSION
+  1  0      ; diffusion model type, diffusion constant
+
+#STOP

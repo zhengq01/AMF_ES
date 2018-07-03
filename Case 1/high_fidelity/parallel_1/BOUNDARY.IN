@@ -1,0 +1,27 @@
+Pcp_File_Version=3
+*** BLOCK J: BOUNDARY INFORMATION *********************************************
+    NumBP     NObs  SeepF  FreeD DrainF  qQWLF
+       52        3      f      t      f      f
+ Interp H/Flux H/Flx1  Atm/H Seep/H Atm/WL Atm/SF   Snow
+      f      f      f      f      f      f      f      f
+Node Number Array
+     17      18      19      20      21      22      23      24      25      26 
+     27    1641    1642    1643    1644    1645    1646    1647    1648    1649 
+   1650    1651    1652    1653    1654    1655    1656    1657    1658    1659 
+   1660    1661    1662    1663    1664    1665    1666    1667    1668    1669 
+   1670    1671    1672    1673    1674    1675    1676    1677    1678    1679 
+   1680    1681 
+Width Array
+   1.25     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5 
+   1.25    1.25     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5 
+    2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5 
+    2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5 
+    2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5     2.5 
+    2.5    1.25 
+Length of soil surface associated with transpiration
+              0
+Observation nodes. Node(1,....NObs)
+     349      677     1005 
+Number of Flowing points and their indeces
+    0
+*** End of input file 'BOUNDARY.IN' *******************************************

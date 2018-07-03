@@ -1,0 +1,950 @@
+
+          ###################################################
+          ##                                               ##
+          ##               OpenGeoSys-Project              ##
+          ##                                               ##
+          ##  Helmholtz Center for Environmental Research  ##
+          ##    UFZ Leipzig - Environmental Informatics    ##
+          ##                  TU Dresden                   ##
+          ##              University of Kiel               ##
+          ##            University of Edinburgh            ##
+          ##         University of Tuebingen (ZAG)         ##
+          ##       Federal Institute for Geosciences       ##
+          ##          and Natural Resources (BGR)          ##
+          ##                                               ##
+          ##       Version 5.5(WW)  Date 22.05.2014        ##
+          ##                                               ##
+          ###################################################
+
+          File name (without extension): G:\Model\ZHQ\DrawDown\HM_P_BC\DrawDown
+            
+---------------------------------------------
+Data input:
+GEOLIB::readGLIFile open stream from file G:\Model\ZHQ\DrawDown\HM_P_BC\DrawDown.gli ... done
+read points from stream ...  ok, 4 points read
+read polylines from stream ...  ok, 5 polylines read
+read surfaces from stream ... triangulation of surface: ... done - 2 triangles 
+ ok, 1 surfaces read
+PCSRead ... done, read 2 processes
+MFPRead
+CPRead
+BCRead ... done, read 3 boundary conditions
+STRead ... done, read 0 source terms
+ICRead
+OUTRead
+TIMRead
+MSPRead
+MMPRead ... done, read 1 medium properties
+NUMRead
+ --
+ Using old $NON_LINEAR_SOLVER keyword.
+ Eventually this will be obsolete. Consider switching to
+ $NON_LINEAR_ITERATIONS for better results and greater flexibility.
+ --
+ --
+ Using old $NON_LINEAR_SOLVER keyword.
+ Eventually this will be obsolete. Consider switching to
+ $NON_LINEAR_ITERATIONS for better results and greater flexibility.
+ --
+WARNING in NUMRead. Overall coupling requested, but MASS_TRANSPORT was not
+supplied with coupling tolerance. Adopting 10*non_linear_tolerance.
+MSHRead:  ASCII file
+Executing ConstructGrid() ...  done.
+CURRead
+DOMRead: no DDC file
+---------------------------------------------
+Create PCS processes
+.............................................
+Create: MULTI_PHASE_FLOW
+
+->Create MMP
+->Create NUM
+->Create EQS
+->Create TIM
+->Create BC
+	[BC] set BC took 0
+	[BC] set transient BC took 0
+	[BC] set BC took 0
+	[BC] set transient BC took 0
+->Create ST
+->Config ELE values
+->Config NOD values
+->Assign IC
+->  Gass flow is formulated as mass balance.
+.............................................
+Create: DEFORMATION
+
+->Create MMP
+->Create NUM
+->Create EQS
+->Create TIM
+->Create BC
+	[BC] set BC took 0
+	[BC] set transient BC took 0
+	[BC] set BC took 0
+	[BC] set transient BC took 0
+Warning: no boundary conditions specified for DEFORMATION
+->Create ST
+->Config ELE values
+->Config NOD values
+->Assign IC
+RFR: no restart data
+Checking output data 
+Warning - no PCS data for output variable SATURATION2 in DOMAIN 
+Warning - no PCS data for output variable n in DOMAIN 
+Warning - no PCS data for output variable Ki in DOMAIN 
+ Reducing output to variables with existing PCS-data 
+Warning - no PCS data for output variable SATURATION2 in POINT POINT0
+Warning - no PCS data for output variable n in POINT POINT0
+Warning - no PCS data for output variable Ki in POINT POINT0
+ Reducing output to variables with existing PCS-data 
+Warning - no PCS data for output variable SATURATION2 in POINT POINT3
+Warning - no PCS data for output variable n in POINT POINT3
+Warning - no PCS data for output variable Ki in POINT POINT3
+ Reducing output to variables with existing PCS-data 
+
+
+***Start time steps
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+
+#############################################################
+Time step: 1|  Time: 3600|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 45.0071
+         PCS error DOF[1]: 2.7989e-06
+         ->Euclidian norm of unknowns: 521.643
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.241s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 2|  Time: 7200|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 1226.3
+         PCS error DOF[1]: 0.000146886
+         ->Euclidian norm of unknowns: 24586.6
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 184.283
+         PCS error DOF[1]: 0.0325846
+         ->Euclidian norm of unknowns: 2167.52
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 23.6338
+         PCS error DOF[1]: 0.00961251
+         ->Euclidian norm of unknowns: 281.228
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 1.39678
+         PCS error DOF[1]: 0.000542289
+         ->Euclidian norm of unknowns: 16.5547
+    PCS non-linear iteration: 4/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 4/100
+         PCS error DOF[0]: 0.0712591
+         PCS error DOF[1]: 2.92383e-05
+         ->Euclidian norm of unknowns: 0.844725
+    PCS non-linear iteration: 5/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 5/100
+         PCS error DOF[0]: 0.00367177
+         PCS error DOF[1]: 1.49909e-06
+         ->Euclidian norm of unknowns: 0.0435256
+    PCS non-linear iteration: 6/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 6/100
+         PCS error DOF[0]: 0.0001891
+         PCS error DOF[1]: 7.72561e-08
+         ->Euclidian norm of unknowns: 0.00224158
+    PCS non-linear iteration: 7/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 7/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.282s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 3|  Time: 10800|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 1991.4
+         PCS error DOF[1]: 0.0214494
+         ->Euclidian norm of unknowns: 38490.7
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 274.543
+         PCS error DOF[1]: 0.264987
+         ->Euclidian norm of unknowns: 3371.06
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 16.1844
+         PCS error DOF[1]: 0.0423934
+         ->Euclidian norm of unknowns: 197.486
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0.259363
+         PCS error DOF[1]: 0.00110249
+         ->Euclidian norm of unknowns: 2.05318
+    PCS non-linear iteration: 4/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 4/100
+         PCS error DOF[0]: 0.0201103
+         PCS error DOF[1]: 5.83871e-06
+         ->Euclidian norm of unknowns: 0.22938
+    PCS non-linear iteration: 5/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 5/100
+         PCS error DOF[0]: 0.00100354
+         PCS error DOF[1]: 1.09294e-06
+         ->Euclidian norm of unknowns: 0.0107811
+    PCS non-linear iteration: 6/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 6/100
+         PCS error DOF[0]: 5.52699e-05
+         PCS error DOF[1]: 5.04515e-08
+         ->Euclidian norm of unknowns: 0.000603353
+    PCS non-linear iteration: 7/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 7/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.275s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 4|  Time: 14400|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 3/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 474.246
+         PCS error DOF[1]: 0.13474
+         ->Euclidian norm of unknowns: 6878.44
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 20.1577
+         PCS error DOF[1]: 0.0419166
+         ->Euclidian norm of unknowns: 248.303
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 1.04849
+         PCS error DOF[1]: 0.00209297
+         ->Euclidian norm of unknowns: 12.9576
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0.0670189
+         PCS error DOF[1]: 0.000125938
+         ->Euclidian norm of unknowns: 0.829947
+    PCS non-linear iteration: 4/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 4/100
+         PCS error DOF[0]: 0.00418834
+         PCS error DOF[1]: 1.00019e-05
+         ->Euclidian norm of unknowns: 0.0518489
+    PCS non-linear iteration: 5/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 5/100
+         PCS error DOF[0]: 0.000262377
+         PCS error DOF[1]: 6.263e-07
+         ->Euclidian norm of unknowns: 0.00324828
+    PCS non-linear iteration: 6/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 6/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.328s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 5|  Time: 18000|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 346.614
+         PCS error DOF[1]: 0.109621
+         ->Euclidian norm of unknowns: 5438.86
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 1.23178
+         PCS error DOF[1]: 0.00869323
+         ->Euclidian norm of unknowns: 14.4709
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 0.0496986
+         PCS error DOF[1]: 7.67522e-05
+         ->Euclidian norm of unknowns: 0.623307
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0.00146889
+         PCS error DOF[1]: 3.19963e-06
+         ->Euclidian norm of unknowns: 0.0183275
+    PCS non-linear iteration: 4/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 4/100
+         PCS error DOF[0]: 4.46495e-05
+         PCS error DOF[1]: 9.16334e-08
+         ->Euclidian norm of unknowns: 0.000557405
+    PCS non-linear iteration: 5/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 5/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.355s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 6|  Time: 21600|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 62.3266
+         PCS error DOF[1]: 0.0517233
+         ->Euclidian norm of unknowns: 687.49
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0.262543
+         PCS error DOF[1]: 0.000647389
+         ->Euclidian norm of unknowns: 3.2507
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 0.000548867
+         PCS error DOF[1]: 6.4015e-06
+         ->Euclidian norm of unknowns: 0.00669647
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.283s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 7|  Time: 25200|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 19.65
+         PCS error DOF[1]: 0.0179433
+         ->Euclidian norm of unknowns: 198.404
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0.000437701
+         PCS error DOF[1]: 2.16428e-06
+         ->Euclidian norm of unknowns: 0.00332886
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.299s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 8|  Time: 28800|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 73.55
+         PCS error DOF[1]: 0.0155857
+         ->Euclidian norm of unknowns: 1243.98
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0.146749
+         PCS error DOF[1]: 0.000371619
+         ->Euclidian norm of unknowns: 1.81508
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 0.000859346
+         PCS error DOF[1]: 6.11617e-07
+         ->Euclidian norm of unknowns: 0.0107466
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.3s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 9|  Time: 32400|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 73.55
+         PCS error DOF[1]: 0.001673
+         ->Euclidian norm of unknowns: 1441.99
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0.277859
+         PCS error DOF[1]: 0.000656306
+         ->Euclidian norm of unknowns: 3.44689
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 0.000511162
+         PCS error DOF[1]: 1.53725e-06
+         ->Euclidian norm of unknowns: 0.00547577
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.221s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 10|  Time: 36000|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 47.0867
+         PCS error DOF[1]: 0.019229
+         ->Euclidian norm of unknowns: 655.611
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0.0102082
+         PCS error DOF[1]: 1.04284e-05
+         ->Euclidian norm of unknowns: 0.109796
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.231s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 11|  Time: 39600|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 47.0867
+         PCS error DOF[1]: 0.00490805
+         ->Euclidian norm of unknowns: 865.253
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0.155162
+         PCS error DOF[1]: 0.000301305
+         ->Euclidian norm of unknowns: 1.93674
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 0.000848259
+         PCS error DOF[1]: 2.90507e-06
+         ->Euclidian norm of unknowns: 0.0106174
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.222s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 12|  Time: 43200|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 47.0867
+         PCS error DOF[1]: 0.000618006
+         ->Euclidian norm of unknowns: 933.295
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0.149787
+         PCS error DOF[1]: 0.000319731
+         ->Euclidian norm of unknowns: 1.86405
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 0.00026126
+         PCS error DOF[1]: 1.89181e-06
+         ->Euclidian norm of unknowns: 0.0032193
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 4001/4000 
+Warning in CRFProcess::ExecuteLinearSolver() - Maximum iteration number reached
+      Deformation process converged.
+      CPU time elapsed in deformation: 3.292s
+      ------------------------------------------------
+
+This step is accepted.
+Data output: Domain
+Data output: Breakthrough curves - POINT0
+Data output: Breakthrough curves - POINT3
+Data output: Breakthrough curves - POINT1
+
+#############################################################
+
+
+#############################################################
+Time step: 13|  Time: 46800|  Time step size: 3600
+
+      ================================================
+    ->Process 0: MULTI_PHASE_FLOW
+      ================================================
+    PCS non-linear iteration: 0/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 2/5000 
+      -->End of PICARD iteration: 0/100
+         PCS error DOF[0]: 47.0867
+         PCS error DOF[1]: 0.00499333
+         ->Euclidian norm of unknowns: 875.182
+    PCS non-linear iteration: 1/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 1/100
+         PCS error DOF[0]: 0.0294273
+         PCS error DOF[1]: 0.000196171
+         ->Euclidian norm of unknowns: 0.344785
+    PCS non-linear iteration: 2/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 1/5000 
+      -->End of PICARD iteration: 2/100
+         PCS error DOF[0]: 4.75001e-05
+         PCS error DOF[1]: 6.18864e-07
+         ->Euclidian norm of unknowns: 0.000587852
+    PCS non-linear iteration: 3/100
+      Assembling equation system...
+      Calling linear solver...
+	  SpBICGSTAB iteration: 0/5000 
+      -->End of PICARD iteration: 3/100
+         PCS error DOF[0]: 0
+         PCS error DOF[1]: 0
+         ->Euclidian norm of unknowns: 0
+->Calculate velocity
+
+      ================================================
+    ->Process 1: DEFORMATION
+      ================================================
+      Assembling equation system...
+      Calling linear solver...
